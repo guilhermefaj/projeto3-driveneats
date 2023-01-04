@@ -88,6 +88,14 @@ main {
     margin-top: 5px;
 }
 
+.opcao img {
+    max-width: 144px;
+    min-width: 144px;
+    max-height: 87px;
+    min-height: 87px;
+    border-radius: 4px;
+}
+
 ion-icon {
     position: absolute;
     right: 15px;
