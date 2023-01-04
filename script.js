@@ -1,5 +1,13 @@
 //Primeiro, escolha seu prato ---------------------------------------
 
+let escolhaPrato = 0;
+let escolhaBebida = 0;
+let escolhaSobremesa = 0;
+
+let soma = (escolhaPrato + escolhaBebida + escolhaSobremesa);
+
+let prato;
+
 function escolherFrango() {
     document.getElementById("frango").style.borderColor = "rgba(50, 183, 47, 1)";
     document.getElementById("carne").style.borderColor = "white";
@@ -8,6 +16,9 @@ function escolherFrango() {
     document.getElementById("frangoicon").style.color = "rgba(50, 183, 47, 1)"
     document.getElementById("carneicon").style.color = "white"
     document.getElementById("vegicon").style.color = "white"
+
+    prato = "Frango";
+    escolhaPrato = 1;
 }
 
 function escolherCarne() {
@@ -18,6 +29,9 @@ function escolherCarne() {
     document.getElementById("frangoicon").style.color = "white"
     document.getElementById("carneicon").style.color = "rgba(50, 183, 47, 1)"
     document.getElementById("vegicon").style.color = "white"
+
+    prato = "Carne";
+    escolhaPrato = 1;
 }
 
 function escolherVeg() {
@@ -28,9 +42,14 @@ function escolherVeg() {
     document.getElementById("frangoicon").style.color = "white"
     document.getElementById("carneicon").style.color = "white"
     document.getElementById("vegicon").style.color = "rgba(50, 183, 47, 1)"
+
+    prato = "vegetariano";
+    escolhaPrato = 1;
 }
 
 //Agora, sua bebida ---------------------------------------
+
+let bebida;
 
 function escolherCoca() {
     document.getElementById("coca").style.borderColor = "rgba(50, 183, 47, 1)";
@@ -40,6 +59,9 @@ function escolherCoca() {
     document.getElementById("cocaicon").style.color = "rgba(50, 183, 47, 1)"
     document.getElementById("sucoicon").style.color = "white"
     document.getElementById("refrescoicon").style.color = "white"
+
+    bebida = "Coca";
+    escolhaBebida = 1;
 }
 
 function escolherSuco() {
@@ -50,6 +72,9 @@ function escolherSuco() {
     document.getElementById("cocaicon").style.color = "White"
     document.getElementById("sucoicon").style.color = "rgba(50, 183, 47, 1)"
     document.getElementById("refrescoicon").style.color = "white"
+
+    bebida = "Suco";
+    escolhaBebida = 1;
 }
 
 function escolherRefresco() {
@@ -60,9 +85,14 @@ function escolherRefresco() {
     document.getElementById("cocaicon").style.color = "White"
     document.getElementById("sucoicon").style.color = "white"
     document.getElementById("refrescoicon").style.color = "rgba(50, 183, 47, 1)"
+
+    bebida = "Refresco";
+    escolhaBebida = 1;
 }
 
 //Por fim, sua sobremesa ---------------------------------------
+
+let sobremesa;
 
 function escolherPudim() {
     document.getElementById("pudim").style.borderColor = "rgba(50, 183, 47, 1)";
@@ -72,6 +102,9 @@ function escolherPudim() {
     document.getElementById("pudimicon").style.color = "rgba(50, 183, 47, 1)"
     document.getElementById("sorveteicon").style.color = "white"
     document.getElementById("tortaicon").style.color = "white"
+
+    sobremesa = "Pudim";
+    escolhaSobremesa = 1;
 }
 
 function escolherSorvete() {
@@ -82,6 +115,9 @@ function escolherSorvete() {
     document.getElementById("pudimicon").style.color = "white"
     document.getElementById("sorveteicon").style.color = "rgba(50, 183, 47, 1)"
     document.getElementById("tortaicon").style.color = "white"
+
+    sobremesa = "Sorvete";
+    escolhaSobremesa = 1;
 }
 
 function escolherTorta() {
@@ -92,4 +128,15 @@ function escolherTorta() {
     document.getElementById("pudimicon").style.color = "white"
     document.getElementById("sorveteicon").style.color = "white"
     document.getElementById("tortaicon").style.color = "rgba(50, 183, 47, 1)"
+
+    sobremesa = "Torta";
+    escolhaSobremesa = 1;
+}
+
+function finalizarPedido() {
+    if (escolhaPrato == 1 && escolhaBebida == 1 & escolhaSobremesa == 1) {
+        document.getElementById("botaoFinalizar").style.backgroundColor = "rgba(50, 183, 47, 1)"
+        document.getElementById("botaoFinalizar").textContent = "Finalizar Pedido"
+        document.getElementById("botaoFinalizar").style
+    }
 }
