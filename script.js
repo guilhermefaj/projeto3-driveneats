@@ -6,6 +6,12 @@ let escolhaSobremesa = 0;
 
 let soma = (escolhaPrato + escolhaBebida + escolhaSobremesa);
 
+let valorPrato = 0;
+let valorBebida = 0;
+let valorSobremesa = 0;
+
+let total = (valorPrato + valorBebida + valorSobremesa);
+
 let prato;
 
 function escolherFrango() {
@@ -19,6 +25,7 @@ function escolherFrango() {
 
     prato = "Frango";
     escolhaPrato = 1;
+    valorPrato = 14.90;
 }
 
 function escolherCarne() {
@@ -32,6 +39,7 @@ function escolherCarne() {
 
     prato = "Carne";
     escolhaPrato = 1;
+    valorPrato = 19.90;
 }
 
 function escolherVeg() {
@@ -45,6 +53,7 @@ function escolherVeg() {
 
     prato = "vegetariano";
     escolhaPrato = 1;
+    ValorPrato = 18.90;
 }
 
 //Agora, sua bebida ---------------------------------------
@@ -62,6 +71,7 @@ function escolherCoca() {
 
     bebida = "Coca";
     escolhaBebida = 1;
+    valorBebida = 4.90;
 }
 
 function escolherSuco() {
@@ -75,6 +85,7 @@ function escolherSuco() {
 
     bebida = "Suco";
     escolhaBebida = 1;
+    valorBebida = 5.50;
 }
 
 function escolherRefresco() {
@@ -88,6 +99,7 @@ function escolherRefresco() {
 
     bebida = "Refresco";
     escolhaBebida = 1;
+    valorBebida = 3.90;
 }
 
 //Por fim, sua sobremesa ---------------------------------------
@@ -105,6 +117,7 @@ function escolherPudim() {
 
     sobremesa = "Pudim";
     escolhaSobremesa = 1;
+    valorSobremesa = 8.90;
 }
 
 function escolherSorvete() {
@@ -118,6 +131,7 @@ function escolherSorvete() {
 
     sobremesa = "Sorvete";
     escolhaSobremesa = 1;
+    valorSobremesa = 6.90;
 }
 
 function escolherTorta() {
@@ -131,6 +145,7 @@ function escolherTorta() {
 
     sobremesa = "Torta";
     escolhaSobremesa = 1;
+    valorSobremesa = 7.90;
 }
 
 function finalizarPedido() {
@@ -138,5 +153,23 @@ function finalizarPedido() {
         document.getElementById("botaoFinalizar").style.backgroundColor = "rgba(50, 183, 47, 1)"
         document.getElementById("botaoFinalizar").textContent = "Finalizar Pedido"
         document.getElementById("botaoFinalizar").style
+
+        const habilitar = document.querySelector("botaoFinalizar");
+        habilitar.removeAttribute("disabled");
     }
 }
+
+function somarPedidos() {
+    total = (valorPrato + valorBebida + valorSobremesa);
+    totalArredondado = parseFloat(total.toFixed(2));
+}
+
+function enviarMensagem() {
+    let mensagem;
+
+    mensagem = "Oi, DrivenEats! Gostaria de fazer o pedido: \n" + "  • Prato: " + prato + "\n" + "  • Bebida: " + bebida + "\n" + "  • Sobremesa: " + sobremesa + "\n" + "Total: R$ " + totalArredondado + "0";
+
+    mensagem = window.encodeURIComponent(mensagem)
+
+    window.open("https://wa.me/+5535999999999?text=" + mensagem)
+} 
