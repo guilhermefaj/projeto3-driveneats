@@ -154,8 +154,9 @@ function finalizarPedido() {
         document.getElementById("botaoFinalizar").textContent = "Finalizar Pedido"
         document.getElementById("botaoFinalizar").style
 
-        const habilitar = document.querySelector("botaoFinalizar");
-        habilitar.removeAttribute("disabled");
+        var habilitar = document.querySelector("#botaoFinalizar");
+        console.log(habilitar);
+        habilitar.disabled = false;
     }
 }
 
@@ -171,5 +172,5 @@ function enviarMensagem() {
 
     mensagem = window.encodeURIComponent(mensagem)
 
-    window.open("https://wa.me/+5535999999999?text=" + mensagem)
-} 
+    window.open("https://wa.me/+5535997014782?text=" + mensagem)
+}
