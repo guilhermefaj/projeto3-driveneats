@@ -170,7 +170,7 @@ function enviarMensagem() {
 
     mensagem = "Oi, DrivenEats! Gostaria de fazer o pedido: \n" + "  • Prato: " + prato + "\n" + "  • Bebida: " + bebida + "\n" + "  • Sobremesa: " + sobremesa + "\n" + "Total: R$ " + totalArredondado + "0";
 
-    mensagem = window.encodeURIComponent(mensagem)
+    mensagem = window.encodeURIComponent(mensagem);
 
-    window.open("https://wa.me/+5535997014782?text=" + mensagem)
+    window.open("https://wa.me/+5535997014782?text=" + mensagem);
 }

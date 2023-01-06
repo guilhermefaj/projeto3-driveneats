@@ -27,25 +27,27 @@
                 <h1>Primeiro, escolha seu prato</h1>
             </div>
             <div class="opcoes">
-                <div id="frango" class="opcao" onclick="escolherFrango(), finalizarPedido(), somarPedidos()">
+                <div id="frango" class="opcao" data-test="dish"
+                    onclick="escolherFrango(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/frango_yin_yang.png" alt="">
-                    <div>Frango Yin Yang</div>
+                    <div data-test="item-name">Frango Yin Yang</div>
                     <div>Um pouco de batata, um pouco de salada</div>
-                    <div>R$ 14,90</div>
+                    <div data-test="item-price">R$ 14,90</div>
                     <ion-icon id="frangoicon" name="checkmark-circle"></ion-icon>
                 </div>
-                <div id="carne" class="opcao" onclick="escolherCarne(), finalizarPedido(), somarPedidos()">
+                <div id="carne" class="opcao" data-test="dish"
+                    onclick="escolherCarne(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/carne-salada.png" alt="">
-                    <div>Carne e salada</div>
+                    <div data-test="item-name">Carne e salada</div>
                     <div>Salada diversificada e carne bovina</div>
-                    <div>R$ 19,90</div>
+                    <div data-test="item-price">R$ 19,90</div>
                     <ion-icon id="carneicon" name="checkmark-circle"></ion-icon>
                 </div>
-                <div id="veg" class="opcao" onclick="escolherVeg(), finalizarPedido(), somarPedidos()">
+                <div id="veg" class="opcao" data-test="dish" onclick="escolherVeg(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/Prato-Vegetariano.png" alt="">
-                    <div>Vegetariano</div>
+                    <div data-test="item-name">Vegetariano</div>
                     <div>Bife de soja com abobrinha e molho</div>
-                    <div>R$ 18,90</div>
+                    <div data-test="item-price">R$ 18,90</div>
                     <ion-icon id="vegicon" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
@@ -54,25 +56,28 @@
                 <h1>Agora, sua bebida</h1>
             </div>
             <div class="opcoes">
-                <div id="coca" class="opcao" onclick="escolherCoca(), finalizarPedido(), somarPedidos()">
+                <div id="coca" class="opcao" data-test="drink"
+                    onclick="escolherCoca(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/coca-cola.png" alt="">
-                    <div>Coquinha gelada</div>
+                    <div data-test="item-name">Coquinha gelada</div>
                     <div>Lata 350ml</div>
-                    <div>R$ 4,90</div>
+                    <div data-test="item-price">R$ 4,90</div>
                     <ion-icon id="cocaicon" name="checkmark-circle"></ion-icon>
                 </div>
-                <div id="suco" class="opcao" onclick="escolherSuco(), finalizarPedido(), somarPedidos()">
+                <div id="suco" class="opcao" data-test="drink"
+                    onclick="escolherSuco(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/suco.png" alt="">
-                    <div>Suco</div>
+                    <div data-test="item-name">Suco</div>
                     <div>Copo de 300ml</div>
-                    <div>R$ 5,50</div>
+                    <div data-test="item-price">R$ 5,50</div>
                     <ion-icon id="sucoicon" name="checkmark-circle"></ion-icon>
                 </div>
-                <div id="refresco" class="opcao" onclick="escolherRefresco(), finalizarPedido(), somarPedidos()">
+                <div id="refresco" class="opcao" data-test="drink"
+                    onclick="escolherRefresco(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/refresco.png" alt="">
-                    <div>Refresco</div>
+                    <div data-test="item-name">Refresco</div>
                     <div>Copo de 300ml</div>
-                    <div>R$ 3,90</div>
+                    <div data-test="item-price">R$ 3,90</div>
                     <ion-icon id="refrescoicon" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
@@ -81,31 +86,35 @@
                 <h1>Por fim, sua sobremesa</h1>
             </div>
             <div class="opcoes">
-                <div id="pudim" class="opcao" onclick="escolherPudim(), finalizarPedido(), somarPedidos()">
+                <div id="pudim" class="opcao" data-test="dessert"
+                    onclick="escolherPudim(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/pudim.png" alt="">
-                    <div>Pudim</div>
+                    <div data-test="item-name">Pudim</div>
                     <div>O mais delicioso pudim</div>
-                    <div>R$ 8,90</div>
+                    <div data-test="item-price">R$ 8,90</div>
                     <ion-icon id="pudimicon" name="checkmark-circle"></ion-icon>
                 </div>
-                <div id="sorvete" class="opcao" onclick="escolherSorvete(), finalizarPedido(), somarPedidos()">
+                <div id="sorvete" class="opcao" data-test="dessert"
+                    onclick="escolherSorvete(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/sorvete.png" alt="">
-                    <div>Sorvete</div>
+                    <div data-test="item-name">Sorvete</div>
                     <div>Entregamos em 6 minutos =)</div>
-                    <div>R$ 6,90</div>
+                    <div data-test="item-price">R$ 6,90</div>
                     <ion-icon id="sorveteicon" name="checkmark-circle"></ion-icon>
                 </div>
-                <div id="torta" class="opcao" onclick="escolherTorta(), finalizarPedido(), somarPedidos()">
+                <div id="torta" class="opcao" data-test="dessert"
+                    onclick="escolherTorta(), finalizarPedido(), somarPedidos()">
                     <img src="imagens/torta.png" alt="">
-                    <div>Torta de limão</div>
+                    <div data-test="item-name">Torta de limão</div>
                     <div>Fatia de torta com raspas de limão</div>
-                    <div>R$ 7,90</div>
+                    <div data-test="item-price">R$ 7,90</div>
                     <ion-icon id="tortaicon" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </main>
         <div class="barra">
-            <button id="botaoFinalizar" disabled="true" onclick="enviarMensagem()">Selecione os 3 itens<br> para fechar
+            <button id="botaoFinalizar" disabled="true" data-test="order-btn" onclick="enviarMensagem()">Selecione os 3
+                itens<br> para fechar
                 o
                 pedido</button>
         </div>
